@@ -1,0 +1,22 @@
+----------------------------------------------------------------------------------------------------
+
+1.
+given a superParkingBoy, 2 parking lot,
+    1st parkinglot has 50%  empty rate with 1 space,
+    2nd parkinglot has 100% empty rate with 1 space
+when  park 1 car
+then can park a car in 2nd parkinglot
+
+2.
+given a superParkingBoy, 2 parking lot,
+    1st parkinglot has 100% empty rate with 2 space,
+    2nd parkinglot has 100% empty rate with 1 space
+when  park 1 car
+then can park a car in 1st parkinglot
+
+3.
+given a superParkingBoy, 2 parking lot,
+    1st parkinglot has 0% empty rate with 0 space,
+    2nd parkinglot has 0% empty rate with 0 space
+when  park 1 car
+then can NOT park a car into parkinglot

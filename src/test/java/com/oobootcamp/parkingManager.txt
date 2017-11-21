@@ -1,0 +1,29 @@
+----------------------------------------------------------------------------------------------------
+1.
+given a parking manager, 1 parking lot
+when  park 1 car
+then can park a car in parkinglot
+
+2.
+given a parking manager, 1 parking lot, 1 parking boy
+when  park 1 car
+then can park a car
+
+3.
+given a parking manager,  1 parking boy, 2 parking lot, 1st is full
+when  park 1 car
+then can park a car in 2nd parkinglot
+
+
+
+---------------------------------------------------------------------------
+
+given a parking director,
+    1 manager, owen 1 parking lot with 2 capacity and parking 1 car
+when
+    print report
+then
+    output
+M 1 1
+ p 1 1
+

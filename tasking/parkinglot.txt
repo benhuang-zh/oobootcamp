@@ -1,0 +1,98 @@
+
+given 1 car, parking lot
+when car go in to parking lot
+then it can stop
+
+
+given parkinglot
+when get the car from parkinglot
+then can take a car
+
+
+given a parkinglot with 1 stopping cars
+when take car twice 
+then return null 
+
+
+given a 2 car capacity parkinglot with 1 car stoped
+when stop 2nd cars
+then can stop 2nd cars
+
+
+
+given a 1 car capacity parkinglot with 1 stopping cars
+when stop 2nd car
+then can not stop 2nd car
+
+
+--------------------------------------------------------------------------------------------------
+
+given a parkingBoy, a parking lot,
+when stop 1 car
+then can park
+
+given a parkingBoy, 2 parking lot, 1st is full parkinglot, 2nd is not full parkinglot
+when  stop 1 car
+then can park a car in 2nd parkinglot
+
+given a parkingBoy, a parking lot with a stoping car,
+when take the car
+then get the car
+
+given a parkingBoy, 2 parking lot, car stop on 2nd parkinglot
+when take the car
+then get the car
+
+given a parkingBoy, 2 parking lot, 1st is full parkinglot, 2nd is full parkinglot
+when  stop 1 car
+then can not park a car
+
+
+
+----------------------------------------------------------------------------------------------------
+
+1.
+given a smartParkingBoy, 2 parking lot, 1st parkinglot has 1 avalible slot, 2nd parkinglot has 1 avalible slot
+when  stop 1 car
+then can park a car in 1st parkinglot
+
+2.
+given a smartParkingBoy, 2 parking lot, 1st parkinglot has 1 avalible slot, 2nd parkinglot has 2 avalible slot
+when  stop 1 car
+then can park a car in 2nd parkinglot
+
+3.
+given a smartParkingBoy, 2 full parking lot
+when  stop 1 car
+then can not park a car 
+
+
+----------------------------------------------------------------------------------------------------
+
+1.
+given a superParkingBoy, 2 parking lot, 1st parkinglot has 50% avalible slot, 2nd parkinglot has 100% avalible slot
+when  stop 1 car
+then can park a car in 2nd parkinglot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
