@@ -31,17 +31,10 @@ public class ParkingManager {
         return null;
     }
 
-    public List<ReportData> getReportData() {
+    public ReportData getReportData() {
         Integer totalParkedCars = parkables.stream().map(p -> (p.totalCar())).reduce(0, Integer::sum);
         Integer totalAvailableSpaces = parkables.stream().map(p -> (p.availableSpace())).reduce(0, Integer::sum);
-
-        List<ReportData> list = new ArrayList<>();
-        ReportData managerReprotData = new ReportData(0, "M", totalParkedCars, totalAvailableSpaces);
-        list.add(managerReprotData);
-        for (Parkable p : parkables) {
-            list.addAll(p.getReportData(1));
-        }
-        return list;
+        return ReportDataGenerator.genReportData("M", totalParkedCars, totalAvailableSpaces, parkables);
     }
 
 

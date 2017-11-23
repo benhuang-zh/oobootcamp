@@ -1,20 +1,19 @@
 package com.oobootcamp;
 
-public class ReportData {
-    private final int level;
-    private final String parkableType;
-    private final Integer totalCars;
-    private final Integer availableSpaces;
+import java.util.ArrayList;
+import java.util.List;
 
-    public ReportData(int level, String parkableType, Integer totalCars, Integer availableSpaces) {
-        this.level = level;
+public class ReportData {
+    private String parkableType;
+    private Integer totalCars;
+    private Integer availableSpaces;
+    private List<ReportData> subReport = new ArrayList<>();
+
+
+    public ReportData( String parkableType, Integer totalCars, Integer availableSpaces) {
         this.parkableType = parkableType;
         this.totalCars = totalCars;
         this.availableSpaces = availableSpaces;
-    }
-
-    public int getLevel() {
-        return level;
     }
 
     public String getParkableType() {
@@ -27,5 +26,9 @@ public class ReportData {
 
     public Integer getAvailableSpaces() {
         return availableSpaces;
+    }
+
+    public List<ReportData> getSubReport() {
+        return subReport;
     }
 }

@@ -1,7 +1,6 @@
 package com.oobootcamp;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -44,8 +43,8 @@ public class Parkinglot implements Parkable {
         return availableSpace() > 0;
     }
 
-     @Override
-     public int availableSpace() {
+    @Override
+    public int availableSpace() {
         return capacity - cars.size();
     }
 
@@ -59,7 +58,7 @@ public class Parkinglot implements Parkable {
     }
 
     @Override
-    public List<ReportData> getReportData(int level) {
-        return Arrays.asList(new ReportData(level,"P",totalCar(),availableSpace()));
+    public ReportData getReportData() {
+        return new ReportData("P", totalCar(), availableSpace());
     }
 }

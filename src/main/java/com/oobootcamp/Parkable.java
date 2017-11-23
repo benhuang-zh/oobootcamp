@@ -1,7 +1,5 @@
 package com.oobootcamp;
 
-import java.util.List;
-
 public interface Parkable {
     String parking(Car car) throws NoSpaceException;
 
@@ -14,5 +12,5 @@ public interface Parkable {
 
     int totalCar();
 
-    List<ReportData> getReportData(int level);
+    ReportData getReportData();
 }
