@@ -1,6 +1,7 @@
 package com.oobootcamp;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -58,7 +59,7 @@ public class Parkinglot implements Parkable {
     }
 
     @Override
-    public String getReport(int level) {
-        return StringUtil.formatReportString(level,"P",totalCar(),availableSpace());
+    public List<ReportData> getReportData(int level) {
+        return Arrays.asList(new ReportData(level,"P",totalCar(),availableSpace()));
     }
 }

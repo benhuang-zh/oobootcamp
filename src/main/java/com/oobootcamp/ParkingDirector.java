@@ -8,6 +8,6 @@ public class ParkingDirector {
     }
 
     public String printReport() {
-        return parkingManager.getReport();
+        return ReportUtil.printSimpleReport(parkingManager.getReportData());
     }
 }

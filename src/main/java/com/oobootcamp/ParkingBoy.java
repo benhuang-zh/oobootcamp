@@ -50,11 +50,13 @@ public class ParkingBoy implements Parkable {
     }
 
     @Override
-    public String getReport(int level) {
-        String report = StringUtil.formatReportString(level,"S",totalCar(),availableSpace());
+    public List<ReportData> getReportData(int level) {
+        List<ReportData> list = new ArrayList<>();
+        ReportData managerReprotData = new ReportData(level, "S", totalCar(), availableSpace());
+        list.add(managerReprotData);
         for (Parkable p : parkinglots) {
-            report += p.getReport(level + 1);
+            list.addAll(p.getReportData(level + 1));
         }
-        return report;
+        return list;
     }
 }

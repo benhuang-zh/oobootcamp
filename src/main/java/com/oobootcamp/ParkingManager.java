@@ -31,19 +31,17 @@ public class ParkingManager {
         return null;
     }
 
-    public String getReport() {
+    public List<ReportData> getReportData() {
         Integer totalParkedCars = parkables.stream().map(p -> (p.totalCar())).reduce(0, Integer::sum);
         Integer totalAvailableSpaces = parkables.stream().map(p -> (p.availableSpace())).reduce(0, Integer::sum);
 
-        return formatReportString(totalParkedCars, totalAvailableSpaces);
-    }
-
-    private String formatReportString(Integer totalCars, Integer availableSpaces) {
-        StringBuilder report = new StringBuilder(StringUtil.formatReportString(0, "M", totalCars, availableSpaces));
+        List<ReportData> list = new ArrayList<>();
+        ReportData managerReprotData = new ReportData(0, "M", totalParkedCars, totalAvailableSpaces);
+        list.add(managerReprotData);
         for (Parkable p : parkables) {
-            report.append(p.getReport(1));
+            list.addAll(p.getReportData(1));
         }
-        return report.toString();
+        return list;
     }
 
 
