@@ -27,7 +27,8 @@ public class ParkingDirectorTest {
         String report = parkingDirector.printReport();
 
         String expectedReport = "M 1 0\n" +
-                " S 1 0";
+                " S 1 0\n" +
+                "  P 1 0";
         assertEquals(expectedReport, report);
     }
 

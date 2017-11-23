@@ -11,4 +11,6 @@ public interface Parkable {
     int availableSpace();
 
     int totalCar();
+
+    String getReport(int level);
 }

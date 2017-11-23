@@ -35,17 +35,16 @@ public class ParkingManager {
         Integer totalParkedCars = parkables.stream().map(p -> (p.totalCar())).reduce(0, Integer::sum);
         Integer totalAvailableSpaces = parkables.stream().map(p -> (p.availableSpace())).reduce(0, Integer::sum);
 
-        String report = formatReportString(totalParkedCars, totalAvailableSpaces);
-        return report;
+        return formatReportString(totalParkedCars, totalAvailableSpaces);
     }
 
     private String formatReportString(Integer totalCars, Integer availableSpaces) {
-        String report = "M " + totalCars + " " + availableSpaces;
+        StringBuilder report = new StringBuilder(StringUtil.formatReportString(0, "M", totalCars, availableSpaces));
         for (Parkable p : parkables) {
-            int totalParkableCar = p.totalCar();
-            int totalParkableAvailSpace = p.availableSpace();
-            report += "\n P " + totalParkableCar + " " + totalParkableAvailSpace;
+            report.append(p.getReport(1));
         }
-        return report;
+        return report.toString();
     }
+
+
 }

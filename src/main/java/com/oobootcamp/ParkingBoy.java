@@ -48,4 +48,13 @@ public class ParkingBoy implements Parkable {
     public int totalCar() {
         return parkinglots.stream().map(Parkinglot::totalCar).reduce(0, Integer::sum);
     }
+
+    @Override
+    public String getReport(int level) {
+        String report = StringUtil.formatReportString(level,"S",totalCar(),availableSpace());
+        for (Parkable p : parkinglots) {
+            report += p.getReport(level + 1);
+        }
+        return report;
+    }
 }

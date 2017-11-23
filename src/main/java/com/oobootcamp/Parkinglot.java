@@ -56,4 +56,9 @@ public class Parkinglot implements Parkable {
     public double emptyRate() {
         return availableSpace() / capacity;
     }
+
+    @Override
+    public String getReport(int level) {
+        return StringUtil.formatReportString(level,"P",totalCar(),availableSpace());
+    }
 }
