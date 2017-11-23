@@ -4,14 +4,15 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertSame;
 
 public class ParkingBoyTest {
 
     ParkingStrategy parkingStrategy;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         parkingStrategy = new ParkingBoyStrategy();
     }
 

@@ -4,7 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertSame;
 
 public class SmartParkingBoyTest {
 
@@ -42,7 +43,7 @@ public class SmartParkingBoyTest {
     }
 
     @Test
-    public void should_return_false_when_parkinglot_are_full(){
+    public void should_return_false_when_parkinglot_are_full() {
         Parkinglot parkinglot = new Parkinglot(1);
         try {
             parkinglot.parking(new Car("1"));

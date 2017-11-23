@@ -8,8 +8,8 @@ public class Length {
 
     public Length(int i) {
         this.length = i;
-        if(length >= 100){
-            this.length = i/100;
+        if (length >= 100) {
+            this.length = i / 100;
             this.unit = "m";
         }
     }

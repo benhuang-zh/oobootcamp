@@ -10,7 +10,7 @@ public class ReportData {
     private List<ReportData> subReport = new ArrayList<>();
 
 
-    public ReportData( String parkableType, Integer totalCars, Integer availableSpaces) {
+    public ReportData(String parkableType, Integer totalCars, Integer availableSpaces) {
         this.parkableType = parkableType;
         this.totalCars = totalCars;
         this.availableSpaces = availableSpaces;
